@@ -42,7 +42,7 @@ const Comm = ({ connection, updateConnection, channel, updateChannel }) => {
 
   // connect to websocket, receive messages and push it to socketMessages
   useEffect(() => {
-    webSocket.current = new WebSocket('ws://localhost:3030');
+    webSocket.current = new WebSocket('wss://simple-signaling-server.onrender.com');
     webSocket.current.onmessage = message => {
       const data = JSON.parse(message.data);
       setSocketMessages(prev => [...prev, data]);
