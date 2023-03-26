@@ -26,7 +26,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "webpack serve --mode development",
+    "start": "npx serve dist",
     "serve": "webpack serve --mode development",
     "build": "webpack --mode production"
   },
